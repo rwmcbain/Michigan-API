@@ -56,7 +56,7 @@ $('button').on('click', function(){
 			// var message = data.name;
 			for (var i = 0; i < data.length; i++) {
 			console.log(data[i].name)
-			$('#message-container').append(data[i].name + "<br>")
+			$('#message-container').append(data[i].name + "<br>" + data[i].phone + "<br><br>")
 
 			}
 		},
