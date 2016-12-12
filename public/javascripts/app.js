@@ -37,7 +37,6 @@ console.log('Window has loaded')
 //   console.log(data);
 // });
 
-https://data.michigan.gov/resource/nq2m-znh7.json?name=Baraga State Park
 
 $('button').on('click', function(){
 	console.log('button is working')
@@ -56,7 +55,7 @@ $('button').on('click', function(){
 			// var message = data.name;
 			for (var i = 0; i < data.length; i++) {
 			console.log(data[i].name)
-			$('#message-container').append(data[i].name + "<br>" + data[i].phone + "<br><br>")
+			$('#message-container').append(data[i].name + "<br>" + "<a href" + data[i].phone + "<br><br>")
 
 			}
 		},
@@ -65,6 +64,38 @@ $('button').on('click', function(){
 		}
 	})
 });
+
+
+
+
+
+// $('button').on('click', function(){
+// 	console.log('button is working')
+// 	$('input').html("")
+// 	var city = $('input').val()
+// 		$.ajax({
+// 		url: "https://data.michigan.gov/resource/cg8j-staa.json?city="+city+"",
+// 		type: 'get', // the type of request you're making (get, post)
+// 		dataType: 'json',
+// 		data:
+// 			{
+// 			"$limit" : 5000,
+// 			"$$app_token" : "9xFC6D7ryH5W5VwRAs3vXj3C9"
+// 		},
+// 		success: function(data){
+// 			// var message = data.name;
+// 			for (var i = 0; i < data.length; i++) {
+// 			console.log(data[i].city)
+// 			$('#message-container2').append(data[i].buildingname + "<br>" + data[i].phonenumber + "<br><br>")
+
+// 			}
+// 		},
+// 		error: function(err){
+// 			console.log(err)
+// 		}
+// 	})
+// });
+
 
 // $('button').on('click', function(){
 // 	console.log('button is working')
