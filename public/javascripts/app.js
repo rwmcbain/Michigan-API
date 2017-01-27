@@ -38,10 +38,10 @@ console.log('Window has loaded')
 // });
 
 
-$('button').on('click', function(){
+$('#parksearch').on('click', function(){
 	console.log('button is working')
 	$('#message-container').html("")
-	var county = $('input').val()
+	var county = $('#parkinput').val()
 		$.ajax({
 		url: "https://data.michigan.gov/resource/nq2m-znh7.json?county="+county+"",
 		type: 'get', // the type of request you're making (get, post)
@@ -69,32 +69,32 @@ $('button').on('click', function(){
 
 
 
-// $('button').on('click', function(){
-// 	console.log('button is working')
-// 	$('input').html("")
-// 	var city = $('input').val()
-// 		$.ajax({
-// 		url: "https://data.michigan.gov/resource/cg8j-staa.json?city="+city+"",
-// 		type: 'get', // the type of request you're making (get, post)
-// 		dataType: 'json',
-// 		data:
-// 			{
-// 			"$limit" : 5000,
-// 			"$$app_token" : "9xFC6D7ryH5W5VwRAs3vXj3C9"
-// 		},
-// 		success: function(data){
-// 			// var message = data.name;
-// 			for (var i = 0; i < data.length; i++) {
-// 			console.log(data[i].city)
-// 			$('#message-container2').append(data[i].buildingname + "<br>" + data[i].phonenumber + "<br><br>")
+$('#schoolsearch').on('click', function(){
+	console.log('button is working')
+	$('#message-container2').html("")
+	var city = $('#schoolinput').val()
+		$.ajax({
+		url: "https://data.michigan.gov/resource/cg8j-staa.json?city="+city+"",
+		type: 'get',
+		dataType: 'json',
+		data:
+			{
+			"$limit" : 5000,
+			"$$app_token" : "9xFC6D7ryH5W5VwRAs3vXj3C9"
+		},
+		success: function(data){
+			// var message = data.name;
+			for (var i = 0; i < data.length; i++) {
+			console.log(data[i].city)
+			$('#message-container2').append(data[i].buildingname + "<br>" +data[i].phonenumber + "<br><br>")
 
-// 			}
-// 		},
-// 		error: function(err){
-// 			console.log(err)
-// 		}
-// 	})
-// });
+			}
+		},
+		error: function(err){
+			console.log(err)
+		}
+	})
+});
 
 
 // $('button').on('click', function(){
