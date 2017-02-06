@@ -3,7 +3,7 @@
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'start' ]
 2 info using npm@3.10.7
-3 info using node@v6.6.0
+3 info using node@v6.6.0  
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle webAppWithAPI@0.0.0~prestart: webAppWithAPI@0.0.0
 6 silly lifecycle webAppWithAPI@0.0.0~prestart: no script for prestart, continuing
