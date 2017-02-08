@@ -1,6 +1,6 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/usr/local/Cellar/node/6.6.0/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   '/usr/local/bin/npm', 
 1 verbose cli   'start' ]
 2 info using npm@3.10.7
 3 info using node@v6.6.0  
